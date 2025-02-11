@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Subscribe for Recipe Ideas!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Styling.css') }}">
+</head>
+<body>
+    <div class="popup-container" id="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h1>Get new and fresh recipes sent directly to you!</h1>
+            <form method="POST" action="/register">
+                <div class="txt_field">
+                    <input type="email" name="email" required>
+                    <span></span>
+                    <label>Email</label>
+                </div>
+                <input name="submit" type="submit" value="Sign Up">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+</body>
+</html>

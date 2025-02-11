@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Recipe List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Styling.css') }}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/recipes">Recipes</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Browse Recipes</h1>
+
+        <!-- Search Bar with Clear Search Button -->
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search an ingredient to get specific results...">
+            <button id="search-btn">Search</button>
+            <button id="clear-search-btn" class="hidden">Clear Search</button>
+        </div>
+
+        <div class="recipe-container" id="recipes-container">
+            <p>Loading recipes...</p>
+        </div>
+
+        <!-- Pagination Controls -->
+        <div class="pagination">
+            <button id="prevBtn" disabled>Previous</button>
+            <button id="nextBtn">Next</button>
+        </div>
+    </div>
+
+    <!-- Pop-up Confirmation (Fixed) -->
+    <div id="clear-search-popup" class="popup">
+        <div class="popup-content">
+            <p>Clearing the search will reset the recipe list. You will need to re-enter your search term.</p>
+            <button id="confirm-clear">Proceed</button>
+            <button id="cancel-clear">Cancel</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='Script.js') }}"></script>
+</body>
+</html>

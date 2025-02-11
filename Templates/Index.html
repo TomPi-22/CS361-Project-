@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Styling.css') }}">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/recipes">Recipes</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Welcome to Recipe Finder</h1>
+        <p>Discover delicious recipes based on your favorite ingredients.</p>
+        <p>Our list of recipes and the search bar tool allow you to find and cook your next meal easily.</p>
+        <p>Find ingredients, ideas, or just look around.</p>
+    </header>
+
+    <div id="email-popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Subscribe for Recipe Ideas!</h2>
+            <input type="email" id="email-input" placeholder="Enter your email">
+            <button id="submit-email">Subscribe</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='Script.js') }}"></script>
+</body>
+</html>
